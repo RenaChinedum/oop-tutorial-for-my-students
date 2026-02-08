@@ -21,6 +21,7 @@ public class CashierService {
         validateCustomerWalletBalance(customer);
         Transaction transaction = new Transaction();
         payForProducts(customer, transaction, storeWallet);
+        transaction.setTransactionStatus(SUCCESSFUL);
         receiptService.generateReceipt(transaction, customer);
     }
 
@@ -41,7 +42,6 @@ public class CashierService {
         storeWallet.setBalance(storeWallet.getBalance().add(customer.getCart().getTotal()));
         customerWallet.setBalance(customerWallet.getBalance().subtract(customer.getCart().getTotal()));
         transaction = setTransaction(customer);
-        transaction.setTransactionStatus(SUCCESSFUL);
         AdminService.listedTransactions.put(customer.getFirstName(), transaction);
     }
 

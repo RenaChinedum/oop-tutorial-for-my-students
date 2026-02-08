@@ -15,5 +15,5 @@ public enum Position {
     CASHIER,
     SECURITY,
     MAINTENANCE,
-    OTHER;
+    OTHER
 }

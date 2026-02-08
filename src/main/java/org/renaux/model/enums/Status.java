@@ -8,5 +8,5 @@ public enum Status {
     FAILED,
     COMPLETED,
     DECLINED,
-    APPROVED;
+    APPROVED
 }

@@ -59,6 +59,10 @@ public class Main {
         CashierService cashierService = new CashierService(receiptService);
         cashierService.sellProduct(customer, AdminService.listedStaffs.get(0), wallet);
         cashierService.sellProduct(customer2, AdminService.listedStaffs.get(1), wallet);
-        cashierService.sellProduct(customer3, AdminService.listedStaffs.get(0), wallet);;
+        cashierService.sellProduct(customer3, AdminService.listedStaffs.get(0), wallet);
+
+
+        adminService.listTransaction();
+
     }
 }

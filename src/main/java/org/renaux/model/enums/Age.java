@@ -4,5 +4,5 @@ public enum Age {
     CHILD,
     TEENAGER,
     ADULT,
-    SENIOR;
+    SENIOR
 }
