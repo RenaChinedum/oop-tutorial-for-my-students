@@ -32,7 +32,7 @@ public class FileHandler {
                             .description(data[2])
                             .price(Double.parseDouble(data[3]))
                             .quantity(Integer.parseInt(data[4]))
-                            .stockStatus(data[4] != null ? StockStatus.IN_STOCK : StockStatus.OUT_OF_STOCK)
+                            .stockStatus(data[4] != null ? (Integer.parseInt(data[4]) > 0 ? StockStatus.IN_STOCK : StockStatus.OUT_OF_STOCK) : StockStatus.NO_QUANTITY)
                             .build();
                     requests.add(product);
                 }
